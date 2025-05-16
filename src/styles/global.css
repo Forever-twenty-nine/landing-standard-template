@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../../node_modules/@forever-twenty-nine/astro-ui-lib";
 
 html {
     scroll-behavior: smooth;

@@ -1,15 +1,32 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import About from "../sections/About.astro";
-import Contact from "../sections/Contact.astro";
-import Hero from "../sections/Hero.astro";
+//import About from "../sections/About.astro";
+
+//import Hero from "../sections/Hero.astro";
+import { Hero1, About1 } from "@forever-twenty-nine/astro-ui-lib";
 import Services from "../sections/Services.astro";
 import Testimonials from "../sections/Testimonials.astro";
+import Contact from "../sections/Contact.astro";
+import { config } from "../config.js";
+
+const about = {
+	sectionId: "about",
+	tagTitle: "Sobre Nosotros",
+	imageSrc: "https://placehold.org/600x400/3CB371/FFFFFF?text=Imagen+About",
+	title: "Construimos soluciones digitales que impulsan tu crecimiento",
+};
+
 ---
 
 <Layout>
-	<Hero />
-	<About />
+	<Hero1 />
+	<About1
+		sectionId={about.sectionId}
+		tagTitle={about.tagTitle}
+		imageSrc={about.imageSrc}
+		title={about.title}
+	/>
+
 	<Services />
 	<Testimonials />
 	<Contact />
